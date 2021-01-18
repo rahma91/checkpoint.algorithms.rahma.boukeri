@@ -1,0 +1,24 @@
+ALGORITHM Rahma
+VAR
+    str : STRING;
+    Som1,som2: INTEGER:=0; 
+    i,nbvoy:INTEGER:=0;                   
+    espace : CHAR:= " "  
+               
+BEGIN
+    //La longueur de la phrase (le nombre de caractères).
+        Som:=0;
+    FOR i FROM 0 TO str.length-1 DO
+        ecrire(str[i])    
+        Som<--Som+i
+    END_FOR
+        // ecrire('La longueur de la phrase est :' ,som)
+     //Le nombre de mots dans la phrase
+        WHILE (str[i]= espace AND i<str.length) DO
+        Som2:=som2+1;
+        i=i+1;      
+        END_WHILE
+     //Le nombre de voyelles dans la phrase.
+     IF (str[i] in['a','e','i','y','o','u']) THEN
+        nbvoy:=nbvoy+1
+     END_IF
