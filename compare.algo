@@ -1,0 +1,39 @@
+ALGORITHM Compare
+VAR
+    t1 , t2 : ARRAY_OF INTEGER[5];
+    i , j : INTEGER
+    som : INTEGER := 0 
+    find : BOOLEAN :=false
+    
+BEGIN
+    t1:={12,13,6,10}
+    t2:={13,10,16,15}
+    
+    FOR i FROM 0 TO t1.length-1 STEP 1  DO
+        FOR j FROM 0 TO t2.length-1  STEP 1  DO
+            IF (t1[i]==t2[j])  THEN
+                find:=true
+                break;
+            END_IF
+            
+        END_FOR
+            IF (find=false) THEN
+               som=som+t1[i]
+            END_IF    
+    find:=false
+    END_FOR
+
+    FOR i FROM 0 TO t2.length-1 STEP 1  DO
+        FOR j FROM 0 TO t1.length-1  STEP 1  DO
+            IF (t2[i]==t1[j])  THEN
+                find:=true
+                break;
+            END_IF
+            
+        END_FOR
+            IF (find=false) THEN
+               som=som+t2[i]
+            END_IF    
+    find:=false
+    END_FOR                                                                                                                                                                                                                                                                                                 
+END
